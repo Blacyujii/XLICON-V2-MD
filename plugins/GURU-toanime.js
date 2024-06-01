@@ -2,8 +2,8 @@ import uploadImage from '../lib/uploadImage.js'
 let handler = async (m, { conn, text, args, usedPrefix, command }) => {
 let q = m.quoted ? m.quoted : m
 let mime = (q.msg || q).mimetype || q.mediaType || ""
-if (!/image/g.test(mime)) throw '*tag the image*'
-m.reply('*This jujutsu can turn some portrait photo into anime*')    
+if (!/image/g.test(mime)) throw '*Respond to a image*'
+m.reply('*This command can turn your photo into anime*')    
 let data = await q.download?.()
 let image = await uploadImage(data)
 try {
@@ -18,7 +18,7 @@ try{
 let anime3 = `https://api.caliph.biz.id/api/animeai?img=${image}&apikey=caliphkey`
 await conn.sendFile(m.chat, anime3, 'error.jpg', null, m) 
 } catch (e) {
-throw '*error! system does not detect face in the image*'
+throw '*Error check if the persons face is visible*'
 }}}}
 handler.help = ["toanime"]
 handler.tags = ["AI"]
