@@ -4,7 +4,7 @@ global.rpg = {
     if (isNaN(level)) return { name: "", level: "" };
 
     const role = [
-      { name: "common human", level: -1 },
+      { name: "common human", level: 0 },
       { name: "New born Sorcerer", level: 5 }, //»»————⍟——««\n
       { name: "Grade 3 curse spirit", level: 10 },
       { name: "Grade 3 sorcerer", level: 15 },
@@ -18,8 +18,8 @@ global.rpg = {
       { name: "🧌 MAHITO~master of soul manipulation", level: 60 },
       { name: "🧝‍♂️🌀 GETO~master of curse manipulation", level: 70 },
       { name: "🐲 YUTA~the potential sorcerer", level: 80 },
-      { name: "🔮🤞🏻GOJO~THE HONORED ONE🤞🏻🔮", level: 100 },
-      { name: "🔱👨🏼‍🍳 RYOMEN SUKUNA~MASTER OF ALL 👨🏼‍🍳🔱", level: 200 },
+      { name: "🔮🤞🏻GOJO~THE HONORED ONE🤞🏻🔮", level: 400 },
+      { name: "🔱👨🏼‍🍳 RYOMEN SUKUNA~MASTER OF ALL 👨🏼‍🍳🔱", level: 1000 },
     ];
 
     return role.reverse().find((role) => level >= role.level);
