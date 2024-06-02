@@ -26,7 +26,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
         throw new Error('i refuse to speak')
       }
 
-      await conn.sendButton(m.chat,result, author, 'https://i.imgur.com/YEDKtri.jpeg', [['Script', `${usedPrefix}script`]], null, [['Fork Repo', `https://github.com/Yuujikun/XLICON-V2-MD`]], m)
+      await conn.sendButton(m.chat,result, author, 'https://i.imgur.com/YEDKtri.jpeg', [['Script', `${usedPrefix}script`]], null, [['Fork Repo', `https://github.com/Blacyujii/XLICON-V2-MD`]], m)
       m.react(done)
     } catch (error) {
       console.error('Error from the first API:', error)
@@ -40,7 +40,7 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
       let data = await response.json()
       let result = data.completion
 
-     await conn.sendButton(m.chat,result, author, 'https://i.imgur.com/YEDKtri.jpeg', [['Script', `.sc`]], null, [['Fork Repo', `https://github.com/salmanytofficial/XLICON-V2-MD`]], m)
+     await conn.sendButton(m.chat,result, author, 'https://i.imgur.com/YEDKtri.jpeg', [['Script', `.sc`]], null, [['Fork Repo', `https://github.com/Blacyujii/XLICON-V2-MD`]], m)
       m.react(done)
     }
   } catch (error) {
