@@ -2,7 +2,7 @@ import fetch from 'node-fetch'
 
 let handler = async (m, { text, conn, usedPrefix, command }) => {
   if (!text && !(m.quoted && m.quoted.text)) {
-    throw `Please provide some text or quote a message to get a response.`
+    throw `you should provide some text or quote a message to get a response.`
   }
 
   if (!text && m.quoted && m.quoted.text) {
@@ -23,10 +23,10 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
       let result = data.response.response
 
       if (!result) {
-        throw new Error('No valid JSON response from the first API')
+        throw new Error('i refuse to speak')
       }
 
-      await conn.sendButton(m.chat,result, author, 'https://telegra.ph/file/403a47e628ef49dee27a3.jpg', [['Script', `${usedPrefix}script`]], null, [['Fork Repo', `https://github.com/salmanytofficial/XLICON-V2-MD`]], m)
+      await conn.sendButton(m.chat,result, author, 'https://i.imgur.com/YEDKtri.jpeg', [['Script', `${usedPrefix}script`]], null, [['Fork Repo', `https://github.com/Yuujikun/XLICON-V2-MD`]], m)
       m.react(done)
     } catch (error) {
       console.error('Error from the first API:', error)
@@ -50,6 +50,6 @@ let handler = async (m, { text, conn, usedPrefix, command }) => {
 }
 handler.help = ['chatgpt']
 handler.tags = ['AI']
-handler.command = ['bro', 'chatgpt', 'ai', 'gpt']
+handler.command = ['sis', 'mei', 'ai', 'gpt']
 
 export default handler
