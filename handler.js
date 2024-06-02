@@ -102,9 +102,9 @@ export async function handler(chatUpdate) {
                 if (!isNumber(user.level))
                     user.level = 0
                 if (!('role' in user))
-                    user.role = 'Tadpole'
+                    user.role = 'Common human'
                 if (!('autolevelup' in user))
-                    user.autolevelup = false
+                    user.autolevelup = true
             } else {
                 global.db.data.users[m.sender] = {
                     exp: 0,
@@ -121,8 +121,8 @@ export async function handler(chatUpdate) {
                     banned: false,
                     warn: 0,
                     level: 0,
-                    role: 'Tadpole',
-                    autolevelup: false,
+                    role: 'Common human',
+                    autolevelup: true,
                     
                 }
                 }
@@ -155,7 +155,7 @@ export async function handler(chatUpdate) {
                     antiLink: false,
                     antiSticker: false,
                     antiToxic: false,
-                    detect: false,
+                    detect: true,
                     expired: 0,
                     getmsg: true,
                     isBanned: false,
@@ -169,7 +169,7 @@ export async function handler(chatUpdate) {
                     useDocument: false,
                     viewOnce: false,
                     viewStory: false,
-                    welcome: false,
+                    welcome: true,
                     chatbot: false
                 }
           
@@ -576,10 +576,10 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "XLICON-V2",
+                        title: "MeiAI-V1",
                         body: "welcome to our Group",
                         thumbnailUrl: welcomeApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/C4ivwZKuh5bLJkqfYNPQsk',
+                        sourceUrl: 'https://chat.whatsapp.com/Dk5mQ2e3LcBAYf75Q9VXcA',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
@@ -629,10 +629,10 @@ export async function participantsUpdate({
                         contextInfo: {
                         mentionedJid: [user],
                         externalAdReply: {
-                        title: "XLICON-V2 BOT",
-                        body: "Goodbye from our Group",
+                        title: "MeiAI-V1 BOT",
+                        body: "Goodbye friend,we will probably miss you",
                         thumbnailUrl: leaveApiUrl,
-                        sourceUrl: 'https://chat.whatsapp.com/BfH0KLkICn2BjmGFMRcGMW',
+                        sourceUrl: 'https://chat.whatsapp.com/Dk5mQ2e3LcBAYf75Q9VXcA',
                         mediaType: 1,
                         renderLargerThumbnail: true
                         }}})
